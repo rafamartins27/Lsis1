@@ -9,7 +9,7 @@ public class Equipa {
     private Date dataCriacao;
 
     public Equipa(int idEquipa, String nomeEquipa, Date dataCriacao) {
-        this.idEquipa = idEquipa;
+        this.idEquipa++;
         this.nomeEquipa = nomeEquipa;
         this.dataCriacao = dataCriacao;
     }
