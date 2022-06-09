@@ -17,3 +17,11 @@ function publishToTable() {
         tableElement.appendChild(tbodyElement);
     }
 }
+
+function createNew() {
+    const nomeCompeticao = document.getElementById('nomeEquipa').value;
+    const nomeRonda = document.getElementById('nomeEquipa').value;
+    const nomeEquipa = document.getElementById('nomeEquipa').value;
+    const error = document.getElementById('error');
+    error.innerHTML = (!nomeEquipa || !nomeCompeticao || !nomeRonda) ? 'Nome da equipa e classificação e ronda são obrigatórios.' : '';
+}

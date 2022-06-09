@@ -10,17 +10,11 @@
 </head>
 <body>
 <div class="navbar">
-    <form action="html/competicao.html">
+    <form action="html/historicoCompeticoes.html">
         <input type="submit" value="Competições">
-    </form>
-    <form action="html/rondas.html">
-        <input type="submit" value="Rondas">
     </form>
     <form action="html/juri.html">
         <input type="submit" value="Jurí">
-    </form>
-    <form action="html/equipas.html">
-        <input type="submit" value="Equipas">
     </form>
     <div class="btt">&nbsp;</div>
     <div class="btt">&nbsp;</div>
@@ -30,26 +24,12 @@
     <div class="btt">&nbsp;</div>
 </div>
 
-<div class="info">
-    <label>Nome da Competicao: <input id="nomeCompeticao" type="text"></label>
-    <label>Ronda: <input id="nomeRonda" type="text"></label>
-</div>
-
 <div class="completebox">
-    <label>Nome da Equipa: <input id="nomeEquipa" type="text"></label>
+    <label>Insira o nome da Competição: <input id="nomeCompeticao" type="text"></label>
+    <label>Insira o nome da Ronda: <input id="nomeRonda" type="text"></label>
+    <label>Insira o nome da Equipa: <input id="nomeEquipa" type="text"></label>
     <span id="error"></span>
-    <button class="bttt" onclick="publishToTable()">Submeter</button>
-</div>
-
-<div id="tables">
-    <table id="table">
-        <thead>
-        <tr>
-            <th>Nome da Equipa</th>
-            <th>Classificacao</th>
-        </tr>
-        </thead>
-    </table>
+    <button class="bttt" onclick="createNew()">Criar</button>
 </div>
 
 <div class="imagem"><img src="assets/imageminicio.png" class="imag"></div>
