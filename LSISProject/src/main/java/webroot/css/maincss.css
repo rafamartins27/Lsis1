@@ -104,7 +104,7 @@ div.form {
 label {
     margin: 20px;
     display: block;
-    font-size: 32px;
+    font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
 }
 
@@ -123,7 +123,6 @@ button {
     padding: 10px;
     margin-top: 40px;
     left: 50%;
-    
     transform: translate(-50%, -50%);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
 }
@@ -138,7 +137,7 @@ th,
 td {
     border: 2px solid black;
     border-collapse: collapse;
-    font-size: 32px;
+    font-size: 28px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
     padding: 10px;
     margin-top: 80px;
@@ -148,4 +147,8 @@ td {
 
 th {
     width: 20%;
+}
+
+label.info {
+    font-size: 10px;
 }
