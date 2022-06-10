@@ -9,14 +9,79 @@
 }
 
 .btt{
-    width: 14%;
+    width: 20%;
+    height 80px;
     border: 0px solid black;
+    vertical-align: center;
+    background-color: rgba(255, 255, 100, 0.1);
 }
+/* Dropdown Button */
+.dropbtn {
+  background-color: rgba(255, 255, 100, 0.4);
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 16px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: rgba(255, 255, 100, 0.9);}
 
 body{
     /*background-color: rgba(128, 128, 128, 0.43);*/
 }
 
+.botaum{
+height: 80px;
+width: 100%;
+background-color: rgba(255, 255, 100, 0.1);
+border:0px solid white;
+font-size: 25px;
+font-family: fantasy;
+text-shadow: 5px 0px 7px rgba(255, 255, 255, 1);
+
+}
+
+.botaum:hover{
+height: 80px;
+width: 100%;
+background-color: rgba(255, 255, 100, 0.4);
+border:1px solid white;
+font-size: 27px;
+font-weight: bold;
+text-shadow: 5px 0px 7px rgba(255, 255, 0, 1);
+}
 
 .logform{
     width: 100%; 
@@ -85,6 +150,7 @@ body{
 .logo{
     width: 80px;
     height: auto;
+
 }
 .completebox{
     width: 100%;
