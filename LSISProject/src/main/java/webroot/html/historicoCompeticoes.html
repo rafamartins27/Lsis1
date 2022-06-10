@@ -7,21 +7,13 @@
     <script src="js/mainJs.js"></script>
 </head>
 <body>
-    <form>
-        <div class="form">
-            <label>Competição X</label>
-            <label>Ronda Y</label>
-            <div id="tables">
-                <table id="table">
-                    <thead>
-                    <tr>
-                        <th>Nome da Equipa</th>
-                        <th>Classificacao</th>
-                    </tr>
-                    </thead>
-                </table>
-            </div>
-        </div>
-    </form>
+    <label class="label" id="competicao">Competição X</label>
+    <label class="label" id="ronda">Ronda Y</label>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nomeCompeticao = urlParams.get('nomeCompeticao');
+        console.log(nomeCompeticao);
+    </script>
 </body>
 </html>

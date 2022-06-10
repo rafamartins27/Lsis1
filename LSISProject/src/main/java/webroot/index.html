@@ -8,20 +8,18 @@
     <script src="js/mainJs.js"></script>
 
 </head>
+
 <body>
+
 <div class="navbar">
-    <form action="html/historicoCompeticoes.html">
-        <input type="submit" value="Competições">
-    </form>
-    <form action="html/juri.html">
-        <input type="submit" value="Jurí">
-    </form>
-    <div class="btt">&nbsp;</div>
-    <div class="btt">&nbsp;</div>
-    <div class="btt"><img src="assets/logo.png" class="logo"></div>
-    <div class="btt">&nbsp;</div>
-    <div class="btt">&nbsp;</div>
-    <div class="btt">&nbsp;</div>
+    <nav>
+        <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html/historicoCompeticoes.html">Histórico de Competições</a></li>
+            <li><a href="html/juri.html">Jurí</a></li>
+            <img src="assets/logo.png" class="menu-icon" width="60px" height="60px">
+        </ul>
+    </nav>
 </div>
 
 <div class="completebox">
@@ -29,7 +27,26 @@
     <label>Insira o nome da Ronda: <input id="nomeRonda" type="text"></label>
     <label>Insira o nome da Equipa: <input id="nomeEquipa" type="text"></label>
     <span id="error"></span>
-    <button class="bttt" onclick="createNew()">Criar</button>
+    <button class="bttt" onclick="publishInfo()">Criar</button>
+</div>
+
+<div>
+    <label class="label" id="competicao">Competição X</label>
+    <label class="label" id="ronda">Ronda Y</label>
+    <form>
+        <div class="form">
+            <div id="tables">
+                <table id="table">
+                    <thead>
+                    <tr>
+                        <th>Nome da Equipa</th>
+                        <th>Classificacao</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </form>
 </div>
 
 <div class="imagem"><img src="assets/imageminicio.png" class="imag"></div>
