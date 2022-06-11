@@ -109,7 +109,7 @@ body{
     font-size: 25px;
     border-radius: 90px;    
     border: 0px;
-    position: center;
+    position: absolute;
 }
 
 .bttt:hover{
@@ -156,6 +156,11 @@ label {
     display: block;
     font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    position: center;
+}
+
+label#competicao {
+    padding-top: 80px;
 }
 
 input {
@@ -190,9 +195,13 @@ td {
     font-size: 28px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
     padding: 10px;
-    margin-top: 80px;
+    margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
+}
+
+table#tableJuri {
+    margin-top: 90px;
 }
 
 th {
