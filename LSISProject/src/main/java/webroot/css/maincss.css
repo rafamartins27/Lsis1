@@ -56,7 +56,7 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: rgba(255, 255, 100, 0.9);}
+.dropdown:hover .dropbtn {background-color: rgba(0, 255, 100, 0.9);}
 
 body{
     /*background-color: rgba(128, 128, 128, 0.43);*/
@@ -116,6 +116,7 @@ text-shadow: 5px 0px 7px rgba(255, 255, 0, 1);
     background-color: yellow;
 }
 .bttt{
+    content-align: center;
     text-align: center;
     font-size: 25px;
     border-radius: 90px;    
@@ -217,4 +218,10 @@ th {
 
 label.info {
     font-size: 10px;
+}
+
+.info{
+width: 100%;
+text-align: center;
+text-align: center;
 }
