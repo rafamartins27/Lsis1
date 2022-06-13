@@ -3,14 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Grupo 8 | Juri</title>
-    <link rel="stylesheet" href="css/maincss.css">
+    <link rel="stylesheet" href="../css/maincss.css">
+    <script src="../js/mainJs.js"></script>
 </head>
+
 <body>
-    <h1>Registar Jurí</h1>
-    <form>
-        <label>Insira o seu nome:</label>
-        <input type="text" value="nome1">
-        <button>Criar</button>
-    </form>
+
+    <div class="navbar">
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="historicoCompeticoes.html">Histórico de Competições</a></li>
+                <li><a href="juri.html">Jurí</a></li>
+                <img src="../assets/logo.png" class="menu-icon" width="60px" height="60px">
+            </ul>
+        </nav>
+    </div>
+
+    <div class="completebox">
+        <label>Insira o nome do Jurí:
+            <input id="nomeJuri" type="text">
+        </label>
+        <span id="errorJuri"></span>
+        <button class="bttt" onclick="tableJuri()">Adicionar</button>
+    </div>
+    <div>
+        <form>
+            <div class="form">
+                <div id="tables">
+                    <table id="tableJuri">
+                        <thead>
+                        <tr>
+                            <th>Nome do Jurí</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

@@ -24,3 +24,19 @@ function publishInfo() {
         labelRonda.innerHTML = nomeRonda;
     }
 }
+
+function tableJuri() {
+    const nomeJuri = document.getElementById('nomeJuri').value;
+    const error = document.getElementById('errorJuri');
+    error.innerHTML = (!nomeJuri) ? 'O campo é obrigatório.' : '';
+    if (nomeJuri) {
+        const tableElement = document.getElementById('tableJuri');
+        const trElement = document.createElement('tr');
+        const tbodyElement = document.createElement('tbody');
+        const juri = document.createElement('td');
+        juri.innerHTML = nomeJuri;
+        trElement.appendChild(juri);
+        tbodyElement.appendChild(trElement);
+        tableElement.appendChild(tbodyElement);
+    }
+}
