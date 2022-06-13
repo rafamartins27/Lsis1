@@ -1,18 +1,41 @@
-function publishToTable() {
+function publishInfo() {
     const nomeEquipa = document.getElementById('nomeEquipa').value;
-    const classificacao = 'calculado automaticamente';
+    const nomeCompeticao = document.getElementById('nomeCompeticao').value;
+    const nomeRonda = document.getElementById('nomeRonda').value;
+    const nomeClassificacao = 'calculado automaticamente';
     const error = document.getElementById('error');
-    error.innerHTML = (!nomeEquipa || !classificacao) ? 'Nome da equipa e classificacao sao obrigatorios.' : '';
-    if (nomeEquipa && classificacao) {
+    error.innerHTML = (!nomeEquipa || !nomeClassificacao || !nomeCompeticao || !nomeRonda) ? 'Todos os campos são obrigatórios.' : '';
+    if (nomeEquipa && nomeClassificacao && nomeCompeticao && nomeRonda) {
         const tableElement = document.getElementById('table');
         const trElement = document.createElement('tr');
         const tbodyElement = document.createElement('tbody');
-        const nameEle = document.createElement('td');
-        const emailEle = document.createElement('td');
-        nameEle.innerHTML = nomeEquipa;
-        emailEle.innerHTML = classificacao;
-        trElement.appendChild(nameEle);
-        trElement.appendChild(emailEle);
+        const equipa = document.createElement('td');
+        const classificacao = document.createElement('td');
+        equipa.innerHTML = nomeEquipa;
+        classificacao.innerHTML = nomeClassificacao;
+        trElement.appendChild(equipa);
+        trElement.appendChild(classificacao);
+        tbodyElement.appendChild(trElement);
+        tableElement.appendChild(tbodyElement);
+
+        const labelCompeticao = document.getElementById('competicao');
+        const labelRonda = document.getElementById('ronda');
+        labelCompeticao.innerHTML = nomeCompeticao;
+        labelRonda.innerHTML = nomeRonda;
+    }
+}
+
+function tableJuri() {
+    const nomeJuri = document.getElementById('nomeJuri').value;
+    const error = document.getElementById('errorJuri');
+    error.innerHTML = (!nomeJuri) ? 'O campo é obrigatório.' : '';
+    if (nomeJuri) {
+        const tableElement = document.getElementById('tableJuri');
+        const trElement = document.createElement('tr');
+        const tbodyElement = document.createElement('tbody');
+        const juri = document.createElement('td');
+        juri.innerHTML = nomeJuri;
+        trElement.appendChild(juri);
         tbodyElement.appendChild(trElement);
         tableElement.appendChild(tbodyElement);
     }
