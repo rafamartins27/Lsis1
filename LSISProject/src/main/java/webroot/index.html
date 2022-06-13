@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grupo 8 | Home</title>
+    <link rel="stylesheet" href="css/maincss.css">
+    <script src="js/mainJs.js"></script>
+
+</head>
+<body>
+<div class="navbar">
+    <div class="btt"><div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            <a href="#">Rondas</a>
+            <a href="#">Juri</a>
+            <a href="#">Equipas</a>
+
+        </div>
+    </div></div>
+
+
+
+
+    <div class="btt"></div>
+    <div class="btt"><img src="assets/logo.png" class="logo" href="index.html"></div>
+    <div class="btt"></div>
+    <div class="btt"></div>
+</div>
+
+<div class="info">
+    <label>Nome da Competicao: <input id="nomeCompeticao" type="text"></label>
+    <label>Ronda: <input id="nomeRonda" type="text"></label>
+</div>
+
+<div class="completebox">
+    <label>Nome da Equipa: <input id="nomeEquipa" type="text"></label>
+    <span id="error"></span>
+    <button class="bttt" onclick="publishToTable()">Submeter</button>
+</div>
+
+<div id="tables">
+    <table id="table">
+        <thead>
+        <tr>
+            <th>Nome da Equipa</th>
+            <th>Classificacao</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<div class="imagem"><img src="assets/imageminicio.png" class="imag"></div>
+<div class="separacao"></div>
+
+</body>
+</html>
