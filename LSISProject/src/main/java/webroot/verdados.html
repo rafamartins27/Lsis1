@@ -1,27 +1,63 @@
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
-  <link rel="stylesheet" href="css/maincss.css">
- 
+    <meta charset="UTF-8">
+    <title>Grupo 8 | Home</title>
+    <link rel="stylesheet" href="css/maincss.css">
+    <script src="js/mainJs.js"></script>
 </head>
 <body>
 <div class="navbar">
-    <div class="btt">&nbsp;</div>    
-    <div class="btt">&nbsp;</div>    
-    <div class="btt">&nbsp;</div>    
-<<<<<<< Updated upstream
-    <div class="btt"><img src="Assets/logo.png" class="logo"></div>    
-=======
-<<<<<<< HEAD
-    <div class="btt"><img src="assets/logo.png" class="logo"></div>
-=======
-    <div class="btt"><img src="Assets/logo.png" class="logo"></div>    
->>>>>>> fbdec06a4393494ad7e25d871fca18d68e130af6
->>>>>>> Stashed changes
-    <div class="btt">&nbsp;</div>    
-    <div class="btt">&nbsp;</div>    
-    <div class="btt">&nbsp;</div>    
-    
-    
-</div>  
+    <div class="btt"><div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            <a href="#">Rondas</a>
+            <a href="juri.html">Juri</a>
+            <a href="#">Equipas</a>
+
+        </div>
+    </div></div>
+
+
+
+
+    <div class="btt"></div>
+    <div class="btt"><img src="assets/logo.png" class="logo" href="index.html"></div>
+    <div class="btt"></div>
+    <div class="btt"></div>
+</div>
+
+<div class="separacao"></div>
+
+<div class="completebox">
+    <label>Competição: <select id="comps" name="compes" class="compis"></select></label><br><br>
+    <label>Ronda: <select id="ronds" name="ronda" class="compis"></select></label><br><br>
+    <button class="bttt" onclick="checkTimes()">Submeter</button>
+</div><br><br>
+<div class="separacao"></div>
+<div id="tables">
+    <table id="table">
+        <thead>
+        <tr>
+            <th>Nome da Equipa</th>
+            <th>Classificacao</th>
+        </tr>
+        <tr>
+            <th>Nome da Equipa</th>
+            <th>Classificacao</th>
+        </tr><tr>
+            <th>Nome da Equipa</th>
+            <th>Classificacao</th>
+        </tr>
+        <tr>
+            <th>Nome da Equipa</th>
+            <th>Classificacao</th>
+        </tr>
+
+        </thead>
+    </table>
+</div>
+
+
 </body>
 </html>
