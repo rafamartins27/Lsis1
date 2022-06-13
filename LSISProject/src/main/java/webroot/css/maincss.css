@@ -6,185 +6,28 @@
     height: 80px;
     border-radius: 15px;
     text-align: center;
-    align-items: center;
 }
 
-nav {
-    flex: 1;
-    text-align: center;
-}
-
-nav ul {
-    display: inline-block;
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-a {
-    font-size: 20px;
-    text-decoration: none;
-    color: black;
-}
-
-@media only screen and (max-width: 800px) {
-    nav ul {
-        top: 70px;
-        left: 0;
-        background: rgb(255,160,1);
-        background: linear-gradient(90deg, rgba(255,160,1,0.7777485994397759) 0%, rgba(255,199,104,0.7609418767507002) 100%);
-        border-radius: 15px;
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s;
-        display: inline-block;
-        list-style-type: none;
-    }
-
-    nav ul li {
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    nav ul li a {
-        color: black;
-    }
-
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-        align-self: center;
-    }
+.separacao{
+width:100%;
+height : 30px;
 }
 
 .btt{
-    width: 14%;
+    width: 20%;
+    height 80px;
     border: 0px solid black;
+    vertical-align: center;
+    background-color: rgba(255, 255, 100, 0.1);
 }
-
-body{
-    /*background-color: rgba(128, 128, 128, 0.43);*/
-}
-
-
-.logform{
-    width: 100%; 
-    display: flex;
-    
-}
-
-.form1{
-    width: 33%;
-    text-align: center;
-    height:100%;
-    border-radius:15px;
-}
-.separacao{
-    width: 100%;
-    height: 100px;
-}
-
-.submit{
-    font-size: 19px;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,0.7777485994397759) 0%, rgba(242,184,86,0.7945553221288515) 72%);
-    border-radius: 10px;
-    font-weight: bold;
-    font-family: cursive;
-    text-align: center;
-    border: 0px solid white;
-}
-
-.submit:hover{
-    
-    background-color: yellow;
-}
-.bttt{
-    text-align: center;
-    font-size: 25px;
-    border-radius: 90px;    
-    border: 0px;
-    position: absolute;
-}
-
-.bttt:hover{
-    background: rgb(252,255,234);
-    background: linear-gradient(3deg, rgba(252,255,234,0.4472163865546218) 0%, rgba(255,255,162,0.2847514005602241) 100%);
-    font-size: 30px;
-    border-radius: 90px;    
-    border: 0px;
-    border: 0px solid white;
-    
-}
-
-.imag{
- width: 600px;
- height: auto;
-
-}
-.imagem{
-    width: 100%;
-    text-align: center;
-}
-.logo{
-    width: 80px;
-    height: auto;
-}
-.completebox{
-    width: 100%;
-    text-align: center;
-    padding-top: 20px;
-}
-.complete {
-
-    text-align: center;
-    width: 33%;
-}
-
-div.form {
-    height: 200px;
-    text-align: center;
-}
-
-label {
-    margin: 20px;
-    display: block;
-    font-size: 25px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
-    position: center;
-}
-
-label#competicao {
-    padding-top: 80px;
-}
-
-input {
-    padding: 10px;
-}
-
-span {
-    color: red;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-button {
-    padding: 10px;
-    margin-top: 40px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
-}
-
-div#tables {
-    height: 300px;
-    overflow: auto;
+/* Dropdown Button */
+.dropbtn {
+  background-color: rgba(255, 255, 100, 0.4);
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
 }
 
 table,
@@ -193,6 +36,8 @@ td {
     border: 2px solid black;
     border-collapse: collapse;
     font-size: 28px;
+     color: #FFFFFF;
+     text-shadow: 0 0 10px #FFFFFF;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
     padding: 10px;
     margin-top: 20px;
@@ -208,7 +53,118 @@ th {
     width: 20%;
 }
 
-label {
-    padding-top: 20px;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 16px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: rgba(0, 255, 100, 0.9);}
+
+body{
+ background-image:url("../assets/nighlights.jpg");
+ background-size: cover;
+
+ background-repeat: no-repeat;
+}
+.imag{
+width:600px;
+height: auto;
+}
+.botaum{
+height: 80px;
+width: 100%;
+background-color: rgba(255, 255, 100, 0.1);
+border:0px solid white;
+font-size: 25px;
+font-family: fantasy;
+text-shadow: 5px 0px 7px rgba(255, 255, 255, 1);
+
+}
+
+.botaum:hover{
+height: 80px;
+width: 100%;
+background-color: rgba(255, 255, 100, 0.4);
+border:1px solid white;
+font-size: 27px;
+font-weight: bold;
+text-shadow: 5px 0px 7px rgba(255, 255, 0, 1);
+}
+
+.logform{
+    width: 100%;
+    background-color: yellow;
+}
+.bttt{
+    content-align: center;
     text-align: center;
+    font-size: 25px;
+    border-radius: 90px;
+    }
+
+
+.bttt:hover{
+background-color:RGBA(85,255,55,0.81);
+color: #FFFFFF;
+
+text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+
+}
+.logo{
+    width: 80px;
+    height: auto;
+
+}
+.completebox{
+    width: 100%;
+    text-align:center;
+}
+
+label.info {
+    font-size: 10px;
+}
+.info{
+width: 100%;
+text-align: center;
+
+}
+
+label{
+ font-size: 30px;
+ color: #FFFFFF;
+ text-shadow: 0 0 10px #FFFFFF;
+}
+
+imagem{
+
+width:100%;
+text-align:center;
+content-align: center;
+vertical-align:center;
 }

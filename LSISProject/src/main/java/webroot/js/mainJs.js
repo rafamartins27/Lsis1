@@ -39,4 +39,8 @@ function tableJuri() {
         tbodyElement.appendChild(trElement);
         tableElement.appendChild(tbodyElement);
     }
+
+function showVal(){
+document.getElementById("valBox").innerHTML=newVal;
+}
 }
