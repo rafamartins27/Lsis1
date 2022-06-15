@@ -15,7 +15,6 @@
             <a href="historicoCompeticoes.html">Historico de Competições</a>
             <a href="juri.html">Juri</a>
             <a href="#">Equipas</a>
-            <a href="testes.html">Testes</a>
 
         </div>
     </div></div>
@@ -29,31 +28,15 @@
     <div class="btt"></div>
 </div>
 
+
 <div class="separacao"></div>
 
-<div class="info">
-    <label>Nome da Competicao: <input id="nomeCompeticao" type="text"></label><br><br>
-    <label>Ronda: <input id="nomeRonda" list="tickmarks" type="range" min="1" max="10" ></label>
-    <datalist id="tickmarks">
-
-    <option value="1" label="1"></option>
-    <option value="2" label="2"></option>
-    <option value="3" label="3"></option>
-    <option value="4" label="4"></option>
-    <option value="5" label="5"></option>
-    <option value="6" label="6"></option>
-    <option value="7" label="7"></option>
-    <option value="8" label="8"></option>
-    <option value="9" label="9"></option>
-    <option value="10" label="10"></option>
-        </datalist>
-
-</div>
 <div class="completebox">
-    <label>Nome da Equipa: <input id="nomeEquipa" type="text"></label>
-    <span id="error"></span><br><br>
-    <button class="bttt" onclick="publishInfo()">Submeter</button>
-</div>
+    <label>Competição: <select id="comps" name="compes" class="compis"></select></label><br><br>
+    <label>Ronda: <select id="ronds" name="ronda" class="compis"></select></label><br><br>
+    <button class="bttt" onclick="checkTimes()">Submeter</button>
+</div><br><br>
+<div class="separacao"></div>
 <div id="tables">
     <table id="table">
         <thead>
@@ -61,6 +44,18 @@
             <th>Nome da Equipa</th>
             <th>Classificacao</th>
         </tr>
+        <tr>
+            <th>Nome da Equipa</th>
+            <th>Classificacao</th>
+        </tr><tr>
+            <th>Nome da Equipa</th>
+            <th>Classificacao</th>
+        </tr>
+        <tr>
+            <th>Nome da Equipa</th>
+            <th>Classificacao</th>
+        </tr>
+
         </thead>
     </table>
 </div>

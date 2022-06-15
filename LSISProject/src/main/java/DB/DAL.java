@@ -19,7 +19,7 @@ public class DAL {
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO Competicao (id_Comp, nome_Comp, data_criacao) VALUES (?,?,?)");
             stmt.setInt(1, competicao.getId_Comp());
             stmt.setString(2, competicao.getNome_Comp());
-            stmt.setDate(3, competicao.getData_criacao());
+            stmt.setString(3, competicao.getData_criacao());
             stmt.executeUpdate();
             conn.close();
         } catch (Exception e) {
@@ -98,7 +98,7 @@ public class DAL {
             Competicao returnCompeticao = new Competicao();
             if (rs.next()) {
                 returnCompeticao.setNome_Comp(rs.getString("nome_Comp"));
-                returnCompeticao.setData_criacao(rs.getDate("data_criacao"));
+                returnCompeticao.setData_criacao(rs.getString("data_criacao"));
             }
             conn.close();
             return returnCompeticao;

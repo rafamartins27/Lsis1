@@ -1,7 +1,6 @@
 package InternalClasses;
 
 public class ElementosJuri {
-
     private int id;
     private String Nome;
 

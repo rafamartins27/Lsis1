@@ -6,12 +6,12 @@ public class Competicao {
 
     private int id_Comp;
     private String nome_Comp;
-    private Date data_criacao;
+    private String data_criacao;
 
     public Competicao() {
     }
 
-    public Competicao(String nome_Comp, Date data_criacao) {
+    public Competicao(String nome_Comp, String data_criacao) {
         this.nome_Comp = nome_Comp;
         this.data_criacao = data_criacao;
     }
@@ -32,11 +32,11 @@ public class Competicao {
         this.nome_Comp = nome_Comp;
     }
 
-    public Date getData_criacao() {
+    public String getData_criacao() {
         return data_criacao;
     }
 
-    public void setData_criacao(Date data_criacao) {
+    public void setData_criacao(String data_criacao) {
         this.data_criacao = data_criacao;
     }
 
