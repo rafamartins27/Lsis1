@@ -8,12 +8,8 @@ function publishInfo() {
     localStorage.setItem('Competicao',nomeCompeticao);
 
 
-    const rond = JSON.parse( localStorage.getItem('Ronda') );
-    console.log(rond);
-    const eqi = JSON.parse( localStorage.getItem('Equipa') );
-    console.log(eqi);
-    const cp = JSON.parse( localStorage.getItem('Competicao') );
-    console.log(cp);
+
+    console.log(localStorage);
 
     const error = document.getElementById('error');
     error.innerHTML = (!nomeEquipa || !nomeClassificacao || !nomeCompeticao || !nomeRonda) ? 'Todos os campos são obrigatórios.' : '';
@@ -51,18 +47,19 @@ function tableJuri() {
         tbodyElement.appendChild(trElement);
         tableElement.appendChild(tbodyElement);
     }
-
+}
 function showVal(){
 document.getElementById("valBox").innerHTML=newVal;
 
 }
 function getDados(){
-const ron = JSON.parse( localStorage.getItem('Ronda') );
-document.getElementById("competicao").innerHTML = localStorage.getItem("Competicao  ");
+console.log(localStorage);
+const comp = localStorage.getItem('Competicao');
+const eqi = localStorage.getItem('Equipa');
+const ron = localStorage.getItem('Ronda');
 
+document.getElementById('competicao').innerHTML = comp;
+document.getElementById('ronda').innerHTML = ron;
 
 }
 
-
-
-}
