@@ -4,46 +4,49 @@ import java.sql.Date;
 
 public class Competicao {
 
-    private int idCompeticao;
-    private String nomeCompeticao;
-    private Date dataCompeticao;
+    private int id_Comp;
+    private String nome_Comp;
+    private Date data_criacao;
 
-    public Competicao(int idCompeticao, String nomeCompeticao, Date dataCompeticao) {
-        this.idCompeticao++;
-        this.nomeCompeticao = nomeCompeticao;
-        this.dataCompeticao = dataCompeticao;
+    public Competicao() {
     }
 
-    public int getIdCompeticao() {
-        return idCompeticao;
+    public Competicao(int id_Comp, String nome_Comp, Date data_criacao) {
+        this.id_Comp = id_Comp;
+        this.nome_Comp = nome_Comp;
+        this.data_criacao = data_criacao;
     }
 
-    public void setIdCompeticao(int idCompeticao) {
-        this.idCompeticao = idCompeticao;
+    public int getId_Comp() {
+        return id_Comp;
     }
 
-    public String getNomeCompeticao() {
-        return nomeCompeticao;
+    public void setId_Comp(int id_Comp) {
+        this.id_Comp = id_Comp;
     }
 
-    public void setNomeCompeticao(String nomeCompeticao) {
-        this.nomeCompeticao = nomeCompeticao;
+    public String getNome_Comp() {
+        return nome_Comp;
     }
 
-    public Date getDataCompeticao() {
-        return dataCompeticao;
+    public void setNome_Comp(String nome_Comp) {
+        this.nome_Comp = nome_Comp;
     }
 
-    public void setDataCompeticao(Date dataCompeticao) {
-        this.dataCompeticao = dataCompeticao;
+    public Date getData_criacao() {
+        return data_criacao;
+    }
+
+    public void setData_criacao(Date data_criacao) {
+        this.data_criacao = data_criacao;
     }
 
     @Override
     public String toString() {
         return "Competicao{" +
-                "idCompeticao=" + idCompeticao +
-                ", nomeCompeticao='" + nomeCompeticao + '\'' +
-                ", dataCompeticao=" + dataCompeticao +
+                "id_Comp=" + id_Comp +
+                ", nome_Comp='" + nome_Comp + '\'' +
+                ", data_criacao=" + data_criacao +
                 '}';
     }
 }

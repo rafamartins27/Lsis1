@@ -4,46 +4,49 @@ import java.sql.Date;
 
 public class Equipa {
 
-    private int idEquipa;
-    private String nomeEquipa;
-    private Date dataCriacao;
+    private int id_equipa;
+    private String Nome;
+    private Date data_criacao;
 
-    public Equipa(int idEquipa, String nomeEquipa, Date dataCriacao) {
-        this.idEquipa++;
-        this.nomeEquipa = nomeEquipa;
-        this.dataCriacao = dataCriacao;
+    public Equipa() {
     }
 
-    public int getIdEquipa() {
-        return idEquipa;
+    public Equipa(int id_equipa, String Nome, Date data_criacao) {
+        this.id_equipa = id_equipa;
+        this.Nome = Nome;
+        this.data_criacao = data_criacao;
     }
 
-    public void setIdEquipa(int idEquipa) {
-        this.idEquipa = idEquipa;
+    public int getId_equipa() {
+        return id_equipa;
     }
 
-    public String getNomeEquipa() {
-        return nomeEquipa;
+    public void setId_equipa(int id_equipa) {
+        this.id_equipa = id_equipa;
     }
 
-    public void setNomeEquipa(String nomeEquipa) {
-        this.nomeEquipa = nomeEquipa;
+    public String getNome() {
+        return Nome;
     }
 
-    public Date getDataCriacao() {
-        return dataCriacao;
+    public void setNome(String nome) {
+        this.Nome = nome;
     }
 
-    public void setDataCriacao(Date dataCriacao) {
-        this.dataCriacao = dataCriacao;
+    public Date getData_criacao() {
+        return data_criacao;
+    }
+
+    public void setData_criacao(Date data_criacao) {
+        this.data_criacao = data_criacao;
     }
 
     @Override
     public String toString() {
         return "Equipa{" +
-                "idEquipa=" + idEquipa +
-                ", nomeEquipa='" + nomeEquipa + '\'' +
-                ", dataCriacao=" + dataCriacao +
+                "id_equipa=" + id_equipa +
+                ", Nome='" + Nome + '\'' +
+                ", data_criacao=" + data_criacao +
                 '}';
     }
 }

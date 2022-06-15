@@ -2,35 +2,50 @@ package InternalClasses;
 
 public class ElementosJuri {
 
-    private int idJuri;
-    private String nomeJuri;
+    private int id;
+    private String Nome;
 
-    public ElementosJuri(int idJuri, String nomeJuri) {
-        this.idJuri++;
-        this.nomeJuri = nomeJuri;
+    private int id_Competicao;
+
+    public ElementosJuri() {
     }
 
-    public int getIdJuri() {
-        return idJuri;
+    public ElementosJuri(int id, String Nome, int id_Competicao) {
+        this.id = id;
+        this.Nome = Nome;
+        this.id_Competicao = id_Competicao;
     }
 
-    public void setIdJuri(int idJuri) {
-        this.idJuri = idJuri;
+    public int getId() {
+        return id;
     }
 
-    public String getNomeJuri() {
-        return nomeJuri;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setNomeJuri(String nomeJuri) {
-        this.nomeJuri = nomeJuri;
+    public String getNome() {
+        return Nome;
+    }
+
+    public void setNome(String nome) {
+        this.Nome = nome;
+    }
+
+    public int getId_Competicao() {
+        return id_Competicao;
+    }
+
+    public void setId_Competicao(int id_Competicao) {
+        this.id_Competicao = id_Competicao;
     }
 
     @Override
     public String toString() {
         return "ElementosJuri{" +
-                "idJuri=" + idJuri +
-                ", nomeJuri='" + nomeJuri + '\'' +
+                "id=" + id +
+                ", Nome='" + Nome + '\'' +
+                ", id_Competicao='" + id_Competicao +
                 '}';
     }
 }

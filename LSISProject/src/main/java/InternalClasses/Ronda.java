@@ -2,57 +2,60 @@ package InternalClasses;
 
 public class Ronda {
 
-    private int idRonda;
-    private int idCompeticao;
-    private String tipoRonda;
-    private String nomeRonda;
+    private int id_Ronda;
+    private String tipo;
+    private String nome;
+    private int id_Competicao;
 
-    public Ronda(int idRonda, int idCompeticao, String tipoRonda, String nomeRonda) {
-        this.idRonda++;
-        this.idCompeticao = idCompeticao;
-        this.tipoRonda = tipoRonda;
-        this.nomeRonda = nomeRonda;
+    public Ronda() {
     }
 
-    public int getIdRonda() {
-        return idRonda;
+    public Ronda(int id_Ronda, int id_Competicao, String tipo, String nome) {
+        this.id_Ronda = id_Ronda;
+        this.id_Competicao = id_Competicao;
+        this.tipo = tipo;
+        this.nome = nome;
     }
 
-    public void setIdRonda(int idRonda) {
-        this.idRonda = idRonda;
+    public int getId_Ronda() {
+        return id_Ronda;
     }
 
-    public int getIdCompeticao() {
-        return idCompeticao;
+    public void setId_Ronda(int id_Ronda) {
+        this.id_Ronda = id_Ronda;
     }
 
-    public void setIdCompeticao(int idCompeticao) {
-        this.idCompeticao = idCompeticao;
+    public int getId_Competicao() {
+        return id_Competicao;
     }
 
-    public String getTipoRonda() {
-        return tipoRonda;
+    public void setId_Competicao(int id_Competicao) {
+        this.id_Competicao = id_Competicao;
     }
 
-    public void setTipoRonda(String tipoRonda) {
-        this.tipoRonda = tipoRonda;
+    public String getTipo() {
+        return tipo;
     }
 
-    public String getNomeRonda() {
-        return nomeRonda;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public void setNomeRonda(String nomeRonda) {
-        this.nomeRonda = nomeRonda;
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     @Override
     public String toString() {
         return "Ronda{" +
-                "idRonda=" + idRonda +
-                ", idCompeticao=" + idCompeticao +
-                ", tipoRonda='" + tipoRonda + '\'' +
-                ", nomeRonda='" + nomeRonda + '\'' +
+                "id_Ronda=" + id_Ronda +
+                ", id_Competicao=" + id_Competicao +
+                ", tipo='" + tipo + '\'' +
+                ", nome='" + nome +
                 '}';
     }
 }
