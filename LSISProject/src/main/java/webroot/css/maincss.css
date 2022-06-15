@@ -173,3 +173,15 @@ vertical-align:center;
 width:200px;
 height: 25px;
 }
+
+
+a{
+font-size: 30px;
+color: white;
+
+}
+a:hover{
+font-size: 30px;
+color: orange;
+
+}
