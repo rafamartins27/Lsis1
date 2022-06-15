@@ -7,7 +7,7 @@ public class AssociarJuri {
     private int idCompeticao;
 
     public AssociarJuri(int idAssJuri, int idJuri, int idCompeticao) {
-        this.idAssJuri++;
+        this.idAssJuri = idAssJuri;
         this.idJuri = idJuri;
         this.idCompeticao = idCompeticao;
     }

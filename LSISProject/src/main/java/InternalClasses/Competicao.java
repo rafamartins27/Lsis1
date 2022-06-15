@@ -11,8 +11,7 @@ public class Competicao {
     public Competicao() {
     }
 
-    public Competicao(int id_Comp, String nome_Comp, Date data_criacao) {
-        this.id_Comp = id_Comp;
+    public Competicao(String nome_Comp, Date data_criacao) {
         this.nome_Comp = nome_Comp;
         this.data_criacao = data_criacao;
     }

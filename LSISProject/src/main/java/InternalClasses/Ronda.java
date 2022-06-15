@@ -10,6 +10,11 @@ public class Ronda {
     public Ronda() {
     }
 
+    public Ronda(String tipo, int id_Competicao) {
+        this.tipo = tipo;
+        this.id_Competicao = id_Competicao;
+    }
+
     public Ronda(int id_Ronda, int id_Competicao, String tipo, String nome) {
         this.id_Ronda = id_Ronda;
         this.id_Competicao = id_Competicao;
