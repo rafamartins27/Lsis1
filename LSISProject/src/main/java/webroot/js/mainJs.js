@@ -63,3 +63,28 @@ document.getElementById('ronda').innerHTML = ron;
 
 }
 
+function regJuri(){
+    let form = document.getElementById('registarJuri');
+
+    let juri = new FormData(juri);
+
+    return fetch("/juri", {method: 'POST',
+        headers: {'Content-type': 'application/json'},
+        body: JSON.stringify(Object.fromEntries(aluno))})
+            .then((res) => {
+                return res.json();
+            })
+            .then((result) => {
+                console.log(">" + result.nome);
+                return result;
+            }
+            ).catch(erro => {
+        console.log(erro);
+    });
+}
+
+
+
+
+}
+

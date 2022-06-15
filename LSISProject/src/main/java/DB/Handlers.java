@@ -43,12 +43,23 @@ import java.util.List;
  * @author Misterio
  */
 class Handlers {
-
     //    List<Aluno> BDfalsa = new ArrayList<>();
     String webRoot = "src/main/java/webroot";
 
     Repository repo;
 //    BotTelegram bot;
+
+
+
+
+
+
+
+
+
+
+
+
 
     public Handlers(Repository repo/*, BotTelegram bot*/) {
         this.repo = repo;
