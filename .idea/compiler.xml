@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="LSISProject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="CarParking_IT2" target="15" />
+      <module name="LSISProject" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>
