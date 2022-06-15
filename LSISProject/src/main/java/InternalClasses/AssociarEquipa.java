@@ -10,7 +10,7 @@ public class AssociarEquipa {
     private Date dataAssEquipa;
 
     public AssociarEquipa(int idAssEquipa, int idCompeticao, int idEquipa, Date dataAssEquipa) {
-        this.idAssEquipa++;
+        this.idAssEquipa = idAssEquipa;
         this.idCompeticao = idCompeticao;
         this.idEquipa = idEquipa;
         this.dataAssEquipa = dataAssEquipa;

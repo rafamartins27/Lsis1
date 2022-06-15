@@ -11,6 +11,10 @@ public class Equipa {
     public Equipa() {
     }
 
+    public Equipa(String nome) {
+        Nome = nome;
+    }
+
     public Equipa(int id_equipa, String Nome, Date data_criacao) {
         this.id_equipa = id_equipa;
         this.Nome = Nome;

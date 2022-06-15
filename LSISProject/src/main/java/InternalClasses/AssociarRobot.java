@@ -9,7 +9,7 @@ public class AssociarRobot {
     private double tempo;
 
     public AssociarRobot(int idAssRobot, int idRobot, int idRonda, double velocidade, double tempo) {
-        this.idAssRobot++;
+        this.idAssRobot = idAssRobot;
         this.idRobot = idRobot;
         this.idRonda = idRonda;
         this.velocidade = velocidade;
