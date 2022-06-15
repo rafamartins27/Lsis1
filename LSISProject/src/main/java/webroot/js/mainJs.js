@@ -44,3 +44,9 @@ function showVal(){
 document.getElementById("valBox").innerHTML=newVal;
 }
 }
+
+
+function storevalue{
+
+
+}
