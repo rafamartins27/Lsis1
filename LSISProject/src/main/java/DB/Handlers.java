@@ -1,13 +1,14 @@
 package DB;
 
 import static DB.DAL.*;
-import InternalClasses.Competicao;
-import InternalClasses.Equipa;
-import InternalClasses.Robot;
-import InternalClasses.Ronda;
+
+import InternalClasses.*;
 import io.vertx.core.http.HttpServerResponse;
 import io.vertx.ext.web.RoutingContext;
-import java.sql.Date;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
@@ -18,11 +19,11 @@ class Handlers {
     String webRoot = "src/main/java/webroot";
 
     Repository repo;
-//    BotTelegram bot;
+    Bot bot;
 
-    public Handlers(Repository repo/*, BotTelegram bot*/) {
+    public Handlers(Repository repo, Bot bot) {
         this.repo = repo;
-//        this.bot = bot;
+        this.bot = bot;
     }
 
     public void registarCompeticao(RoutingContext rc) {
@@ -34,6 +35,19 @@ class Handlers {
         response.setStatusCode(200).putHeader("content-type", "text/plain; charset=utf-8").end("ok");
     }
 
+    public void addCompeticao(RoutingContext rc) {
+
+        String nomeCompeticao = rc.request().getParam("comp_nome");
+        long time = Calendar.getInstance().getTimeInMillis();
+        java.util.Date date = new Date(time);
+        String createDate = new SimpleDateFormat("yyyy-MM-dd").format(date);
+
+        Competicao competicao = new Competicao(nomeCompeticao, createDate);
+        criarCompeticao(competicao);
+        HttpServerResponse response = rc.response();
+        response.setStatusCode(200).putHeader("content-type", "text/plain; charset=utf-8").end("ok");
+
+    }
     public void registarRonda(RoutingContext rc) {
         String id_Comp = rc.request().getParam("id_Comp");
         int id_CompFinal = Integer.parseInt(id_Comp);

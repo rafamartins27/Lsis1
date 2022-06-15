@@ -1,5 +1,6 @@
 package InternalClasses;
 
+import DB.Repository;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Future;
 import io.vertx.core.Handler;
@@ -13,7 +14,7 @@ public class MQTTCli {
 
     MqttClient client;
     Vertx vertx;
-    //Repository repo;
+    Repository repo;
 
     private final String BROKER_HOST = "maqiatto.com";
     private final int BROKER_PORT = 1883;
@@ -22,7 +23,7 @@ public class MQTTCli {
     private final String topico1 = "goncalofap9311@gmail.com/lsis1"; //no maqiatto comecao pelo email
     // ex: acs@isep.ipp.pt/lsis1
 
-    /*public MQTTCli(Vertx vertx, Repository repo) {
+    public MQTTCli(Vertx vertx, Repository repo) {
         this.vertx = vertx;
         this.repo = repo;
 
@@ -34,7 +35,7 @@ public class MQTTCli {
         Future<MqttConnAckMessage> maqiatto = client.connect(BROKER_PORT, BROKER_HOST);//connectHandler(client));
         maqiatto.onComplete(connectHandler(client));
 
-    }*/
+    }
 
     private Handler<AsyncResult<MqttConnAckMessage>> connectHandler(MqttClient client) {
         return s -> {
@@ -59,7 +60,7 @@ public class MQTTCli {
             System.out.println("Topico: " + s.topicName());
             System.out.println("Mensagem: " + s.payload().toString());
             System.out.println("QoS: " + s.qosLevel());
-            //repo.inserirNaBDFalsa(s.payload().toString());
+            repo.inserirNaBDFalsa(s.payload().toString());
         };
     }
 

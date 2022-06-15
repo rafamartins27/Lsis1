@@ -28,9 +28,9 @@ public class VerticleRSJson extends AbstractVerticle {
     @Override
     public void start(Promise<Void> startPromise) throws Exception {
 
-        /*
+
         bot = new Bot(vertx);
-        telegramBot(bot);
+        //telegramBot(bot);
 
 
         Repository repo = new Repository();
@@ -40,7 +40,7 @@ public class VerticleRSJson extends AbstractVerticle {
         mqttCli = new MQTTCli(vertx, repo);
 
         HttpServerOptions options = new HttpServerOptions();
-        options.setHost("127.0.0.1").setPort(8004);
+        options.setHost("127.0.0.1").setPort(4000);
 
         vertx.createHttpServer(options)
                 .requestHandler(router) //usa o router para manipular qualquer pedido
@@ -62,20 +62,24 @@ public class VerticleRSJson extends AbstractVerticle {
         // serve index
         router.route("/").handler(StaticHandler.create(webRoot));
 
+        /*
         router.route(HttpMethod.GET, "/alunosJson").handler(handlers::sendStringJson);
         router.route(HttpMethod.GET, "/alunosString").handler(handlers::sendArrayAsString);
         router.route(HttpMethod.GET, "/paginaNova")
                 .handler(handlers::paginaNova);//ou StaticHandler.create(webRoot + "/html/nova1.html"));
         router.route(HttpMethod.GET, "/paginaNova2")
-                .handler(handlers::paginaNova2);//ou StaticHandler.create(webRoot + "/html/nova1.html"));
+                .handler(handlers::paginaNova2);//ou StaticHandler.create(webRoot + "/html/nova1.html")); */
 
         // ATENÇÃO: necessário usar "bodyHandler" quando se pretende ler o body do pedido
         //  - nos POST seguintes o body contém os dados do aluno
+        /*
         router.route("/alunos/*").handler(BodyHandler.create());
         // criarALuno() e actualizarALuno() estão na classe Handlers
         router.route(HttpMethod.POST, "/alunos").handler(handlers::criarAluno);
         router.route(HttpMethod.PUT, "/alunos/:numAluno").handler(handlers::actualizarAluno);
-
+        */
+        router.route().handler(BodyHandler.create());
+        router.route(HttpMethod.POST, "/registarCompeticao").handler(handlers::addCompeticao);
         return router;
     }
 
@@ -85,6 +89,6 @@ public class VerticleRSJson extends AbstractVerticle {
             botsApi.registerBot(bot);
         } catch (TelegramApiException e) {
             e.printStackTrace(System.out);
-        }*/
+        }
     }
 }
