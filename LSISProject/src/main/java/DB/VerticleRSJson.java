@@ -80,6 +80,15 @@ public class VerticleRSJson extends AbstractVerticle {
         */
         router.route().handler(BodyHandler.create());
         router.route(HttpMethod.POST, "/registarCompeticao").handler(handlers::addCompeticao);
+
+        router.route(HttpMethod.POST, "/registarRonda").handler(handlers::addRonda);
+
+        router.route(HttpMethod.POST, "/registarEquipa").handler(handlers::addEquipa);
+
+        router.route(HttpMethod.POST, "/registarRobo").handler(handlers::addRobot);
+
+        router.route(HttpMethod.POST, "/registarJuri").handler(handlers::addJuri);
+
         return router;
     }
 

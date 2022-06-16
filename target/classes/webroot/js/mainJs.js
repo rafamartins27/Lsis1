@@ -7,8 +7,6 @@ function publishInfo() {
     localStorage.setItem('Equipa',nomeEquipa);
     localStorage.setItem('Competicao',nomeCompeticao);
 
-
-
     console.log(localStorage);
 
     const error = document.getElementById('error');
@@ -34,7 +32,7 @@ function publishInfo() {
 }
 
 function tableJuri() {
-    const nomeJuri = document.getElementById('nomeJuri').value;
+    const nomeJuri = document.getElementById('juri_nome').value;
     const error = document.getElementById('errorJuri');
     error.innerHTML = (!nomeJuri) ? 'O campo é obrigatório.' : '';
     if (nomeJuri) {
@@ -48,10 +46,7 @@ function tableJuri() {
         tableElement.appendChild(tbodyElement);
     }
 }
-function showVal(){
-document.getElementById("valBox").innerHTML=newVal;
 
-}
 function getDados(){
 console.log(localStorage);
 const comp = localStorage.getItem('Competicao');
@@ -63,28 +58,74 @@ document.getElementById('ronda').innerHTML = ron;
 
 }
 
-function regJuri(){
-    let form = document.getElementById('registarJuri');
+function submitFormJuri(){
+    let formJuri = document.getElementById("registarJuri");
+    let formData = new FormData(formJuri);
 
-    let juri = new FormData(juri);
-
-    return fetch("/juri", {method: 'POST',
-        headers: {'Content-type': 'application/json'},
-        body: JSON.stringify(Object.fromEntries(aluno))})
-            .then((res) => {
+    fetch('/registarJuri', {method: 'POST', body: formData})
+        .then((res) => {
+            if(res.status === 200) {
+                alert("Success!");
                 return res.json();
-            })
-            .then((result) => {
-                console.log(">" + result.nome);
-                return result;
             }
-            ).catch(erro => {
-        console.log(erro);
-    });
+            else throw Error("Server error!!");})
+        .catch((err) => console.log(err));
 }
 
+function submitFormComp() {
+    let formComp = document.getElementById("formComp");
+    let formData = new FormData(formComp);
 
+    fetch('/registarCompeticao', {method: 'POST', body: formData})
+        .then((res) => {
+            if(res.status === 200) {
+                alert("Success!");
+                return res.json();
+            }
+            else throw Error("Server error!!");})
+        .catch((err) => console.log(err));
+}
 
+function submitFormRonda() {
+    let formRonda = document.getElementById("formRonda");
+    let formData = new FormData(formRonda);
 
+    fetch('/registarRonda', {method: 'POST', body: formData})
+        .then((res) => {
+            if(res.status === 200) {
+                alert("Success!");
+                return res.json();
+            }
+            else throw Error("Server error!!");})
+        .catch((err) => console.log(err));
+
+}
+
+function submitFormEquipa() {
+    let formEquipa = document.getElementById("formEquipa");
+    let formData = new FormData(formEquipa);
+
+    fetch('/registarEquipa', {method: 'POST', body: formData})
+        .then((res) => {
+            if(res.status === 200) {
+                alert("Success!");
+                return res.json();
+            }
+            else throw Error("Server error!!");})
+        .catch((err) => console.log(err));
+}
+
+function submitFormRobo() {
+    let formRobo = document.getElementById("formRobo");
+    let formData = new FormData(formRobo);
+
+    fetch('/registarRobo', {method: 'POST', body: formData})
+        .then((res) => {
+            if(res.status === 200) {
+                alert("Success!");
+                return res.json();
+            }
+            else throw Error("Server error!!");})
+        .catch((err) => console.log(err));
 }
 

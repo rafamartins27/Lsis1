@@ -9,8 +9,7 @@ public class ElementosJuri {
     public ElementosJuri() {
     }
 
-    public ElementosJuri(int id, String Nome, int id_Competicao) {
-        this.id = id;
+    public ElementosJuri(String Nome, int id_Competicao) {
         this.Nome = Nome;
         this.id_Competicao = id_Competicao;
     }

@@ -32,7 +32,7 @@ public class DAL {
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO Equipa (id_equipa, Nome, data_criacao) VALUES (?,?,?)");
             stmt.setInt(1, equipa.getId_equipa());
             stmt.setString(2, equipa.getNome());
-            stmt.setDate(3, equipa.getData_criacao());
+            stmt.setString(3, equipa.getData_criacao());
             stmt.executeUpdate();
             conn.close();
         } catch (Exception e) {
@@ -73,7 +73,7 @@ public class DAL {
     public static void criarRonda(Ronda ronda) {
         try {
             Connection conn = DBConnection.getConnection();
-            PreparedStatement stmt = conn.prepareStatement("INSERT INTO Ronda (idRonda, tipoRonda, nomeRonda, idCompeticao) VALUES (?,?,?,?)");
+            PreparedStatement stmt = conn.prepareStatement("INSERT INTO Ronda (id_Ronda, tipo, nome, id_Competicao) VALUES (?,?,?,?)");
             stmt.setInt(1, ronda.getId_Ronda());
             stmt.setString(2, ronda.getTipo());
             stmt.setString(3, ronda.getNome());
@@ -119,7 +119,7 @@ public class DAL {
             Equipa returnEquipa = new Equipa();
             if (rs.next()) {
                 returnEquipa.setNome(rs.getString("Nome"));
-                returnEquipa.setData_criacao(rs.getDate("data_criacao"));
+                returnEquipa.setData_criacao(rs.getString("data_criacao"));
             }
             conn.close();
             return returnEquipa;

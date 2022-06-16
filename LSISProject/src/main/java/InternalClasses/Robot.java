@@ -17,8 +17,7 @@ public class Robot {
         this.id_Equipa = id_Equipa;
     }
 
-    public Robot(int id_Robo, int id_Equipa, String nome_robo, String macAdress, int id_Competicao) {
-        this.id_Robo = id_Robo;
+    public Robot(String nome_robo, String macAdress, int id_Equipa, int id_Competicao) {
         this.id_Equipa = id_Equipa;
         this.nome_robo = nome_robo;
         this.macAdress = macAdress;

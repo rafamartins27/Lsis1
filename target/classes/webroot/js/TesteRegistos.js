@@ -1,4 +1,4 @@
-function submitForm() {
+/*function submitForm() {
     let form = document.getElementById("form");
     let formData = new FormData(form);
 
@@ -10,4 +10,4 @@ function submitForm() {
             }
             else throw Error("Server error!!");})
         .catch((err) => console.log(err));
-    }
+    }*/

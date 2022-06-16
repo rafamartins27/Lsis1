@@ -6,7 +6,7 @@ public class Equipa {
 
     private int id_equipa;
     private String Nome;
-    private Date data_criacao;
+    private String data_criacao;
 
     public Equipa() {
     }
@@ -15,8 +15,7 @@ public class Equipa {
         Nome = nome;
     }
 
-    public Equipa(int id_equipa, String Nome, Date data_criacao) {
-        this.id_equipa = id_equipa;
+    public Equipa(String Nome, String data_criacao) {
         this.Nome = Nome;
         this.data_criacao = data_criacao;
     }
@@ -37,11 +36,11 @@ public class Equipa {
         this.Nome = nome;
     }
 
-    public Date getData_criacao() {
+    public String getData_criacao() {
         return data_criacao;
     }
 
-    public void setData_criacao(Date data_criacao) {
+    public void setData_criacao(String data_criacao) {
         this.data_criacao = data_criacao;
     }
 
