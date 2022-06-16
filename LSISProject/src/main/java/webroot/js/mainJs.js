@@ -1,7 +1,7 @@
 function publishInfo() {
-    const nomeEquipa = document.getElementById('nomeEquipa').value;
-    const nomeCompeticao = document.getElementById('nomeCompeticao').value;
-    const nomeRonda = document.getElementById('nomeRonda').value;
+    const nomeEquipa = document.getElementById('equipa_nome').value;
+    const nomeCompeticao = document.getElementById('comp_nome').value;
+    const nomeRonda = document.getElementById('ronda_nome').value;
     const nomeClassificacao = 'calculado automaticamente';
     localStorage.setItem('Ronda',nomeRonda);
     localStorage.setItem('Equipa',nomeEquipa);
@@ -48,13 +48,14 @@ function tableJuri() {
 }
 
 function getDados(){
-console.log(localStorage);
-const comp = localStorage.getItem('Competicao');
-const eqi = localStorage.getItem('Equipa');
-const ron = localStorage.getItem('Ronda');
+    console.log(localStorage);
+    const competicao = localStorage.getItem('Competicao');
+    const ronda = localStorage.getItem('Ronda');
+    const equipa = localStorage.getItem('Equipa');
 
-document.getElementById('competicao').innerHTML = comp;
-document.getElementById('ronda').innerHTML = ron;
+    document.getElementById('competicao').innerHTML = competicao;
+    document.getElementById('ronda').innerHTML = ronda;
+    document.getElementById('equipa_nome').innerHTML = equipa;
 
 }
 
