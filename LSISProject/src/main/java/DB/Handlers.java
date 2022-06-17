@@ -79,7 +79,7 @@ class Handlers {
     public void addJuri(RoutingContext rc) {
 
         String nome_juri = rc.request().getParam("juri_nome");
-        ElementosJuri juri_novo = new ElementosJuri(nome_juri, 3);
+        ElementosJuri juri_novo = new ElementosJuri(nome_juri, 5);
         criarJuri(juri_novo);
         HttpServerResponse response = rc.response();
         response.setStatusCode(200).putHeader("content-type", "text/plain; charset=utf-8").end("ok");
