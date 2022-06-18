@@ -84,4 +84,46 @@ class Handlers {
         HttpServerResponse response = rc.response();
         response.setStatusCode(200).putHeader("content-type", "text/plain; charset=utf-8").end("ok");
     }
+
+    public void getCompeticoes(RoutingContext rc) {
+        HttpServerResponse response = rc.response();
+        response.putHeader("content-type", "text/plain; charset=utf-8");
+        List<Competicao> listaCompeticoes = new ArrayList<>();
+        obterListaCompeticoes(listaCompeticoes);
+        System.out.println(listaCompeticoes.toString());
+        response.setStatusCode(200);
+        response.end(Json.encodePrettily(listaCompeticoes));
+    }
+
+    public void getEquipas(RoutingContext rc) {
+        HttpServerResponse response = rc.response();
+        response.putHeader("content-type", "text/plain; charset=utf-8");
+        List<Equipa> listaEquipas = new ArrayList<>();
+        obterListaEquipas(listaEquipas);
+        System.out.println(listaEquipas.toString());
+        response.setStatusCode(200);
+        response.end(Json.encodePrettily(listaEquipas));
+    }
+
+    public void getRondas(RoutingContext rc) {
+        String idCompeticao = rc.request().getParam("id");
+        int idCompeticaoFinal = Integer.parseInt(idCompeticao);
+        HttpServerResponse response = rc.response();
+        response.putHeader("content-type", "text/plain; charset=utf-8");
+        List<Ronda> listaRondas = new ArrayList<>();
+        obterListaRondasDeUmaCompeticao(listaRondas, idCompeticaoFinal);
+        System.out.println(listaRondas.toString());
+        response.setStatusCode(200);
+        response.end(Json.encodePrettily(listaRondas));
+    }
+
+    public void getRobos(RoutingContext rc) {
+        HttpServerResponse response = rc.response();
+        response.putHeader("content-type", "text/plain; charset=utf-8");
+        List<Robot> listaRobos = new ArrayList<>();
+        obterListaRobots(listaRobos);
+        System.out.println(listaRobos.toString());
+        response.setStatusCode(200);
+        response.end(Json.encodePrettily(listaRobos));
+    }
 }

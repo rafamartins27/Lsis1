@@ -62,22 +62,6 @@ public class VerticleRSJson extends AbstractVerticle {
         // serve index
         router.route("/").handler(StaticHandler.create(webRoot));
 
-        /*
-        router.route(HttpMethod.GET, "/alunosJson").handler(handlers::sendStringJson);
-        router.route(HttpMethod.GET, "/alunosString").handler(handlers::sendArrayAsString);
-        router.route(HttpMethod.GET, "/paginaNova")
-                .handler(handlers::paginaNova);//ou StaticHandler.create(webRoot + "/html/nova1.html"));
-        router.route(HttpMethod.GET, "/paginaNova2")
-                .handler(handlers::paginaNova2);//ou StaticHandler.create(webRoot + "/html/nova1.html")); */
-
-        // ATENÇÃO: necessário usar "bodyHandler" quando se pretende ler o body do pedido
-        //  - nos POST seguintes o body contém os dados do aluno
-        /*
-        router.route("/alunos/*").handler(BodyHandler.create());
-        // criarALuno() e actualizarALuno() estão na classe Handlers
-        router.route(HttpMethod.POST, "/alunos").handler(handlers::criarAluno);
-        router.route(HttpMethod.PUT, "/alunos/:numAluno").handler(handlers::actualizarAluno);
-        */
         router.route().handler(BodyHandler.create());
         router.route(HttpMethod.POST, "/registarCompeticao").handler(handlers::addCompeticao);
 
@@ -88,6 +72,14 @@ public class VerticleRSJson extends AbstractVerticle {
         router.route(HttpMethod.POST, "/registarRobo").handler(handlers::addRobot);
 
         router.route(HttpMethod.POST, "/registarJuri").handler(handlers::addJuri);
+
+        router.route(HttpMethod.GET, "/getCompeticoes").handler(handlers::getCompeticoes);
+
+        router.route(HttpMethod.GET, "/getEquipas").handler(handlers::getEquipas);
+
+        router.route(HttpMethod.GET, "/getRondas").handler(handlers::getRondas);
+
+        router.route(HttpMethod.GET, "/getRobos").handler(handlers::getRobos);
 
         return router;
     }
