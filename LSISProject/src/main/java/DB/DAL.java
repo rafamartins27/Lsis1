@@ -113,7 +113,7 @@ public class DAL {
             Connection conn = DBConnection.getConnection();
             PreparedStatement stmt = null;
             ResultSet rs = null;
-            stmt = conn.prepareStatement("SELECT * FROM Competicao WHERE id_equipa=?");
+            stmt = conn.prepareStatement("SELECT * FROM Equipa WHERE id_equipa=?");
             stmt.setInt(1, id_equipa);
             rs = stmt.executeQuery();
             Equipa returnEquipa = new Equipa();
@@ -134,7 +134,7 @@ public class DAL {
             Connection conn = DBConnection.getConnection();
             PreparedStatement stmt = null;
             ResultSet rs = null;
-            stmt = conn.prepareStatement("SELECT * FROM Competicao WHERE id=?");
+            stmt = conn.prepareStatement("SELECT * FROM Juri WHERE id=?");
             stmt.setInt(1, id);
             rs = stmt.executeQuery();
             ElementosJuri returnJuri = new ElementosJuri();
@@ -155,7 +155,7 @@ public class DAL {
             Connection conn = DBConnection.getConnection();
             PreparedStatement stmt = null;
             ResultSet rs = null;
-            stmt = conn.prepareStatement("SELECT * FROM Competicao WHERE id_Robo=?");
+            stmt = conn.prepareStatement("SELECT * FROM Robo WHERE id_Robo=?");
             stmt.setInt(1, id_Robo);
             rs = stmt.executeQuery();
             Robot returnRobot = new Robot();
@@ -178,7 +178,7 @@ public class DAL {
             Connection conn = DBConnection.getConnection();
             PreparedStatement stmt = null;
             ResultSet rs = null;
-            stmt = conn.prepareStatement("SELECT * FROM Competicao WHERE id_Ronda=?");
+            stmt = conn.prepareStatement("SELECT * FROM Ronda WHERE id_Ronda=?");
             stmt.setInt(1, id_Ronda);
             rs = stmt.executeQuery();
             Ronda returnRonda = new Ronda();
