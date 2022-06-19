@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
+
+
 <head>
     <meta charset="UTF-8">
     <title>Grupo 8 | Home</title>
@@ -12,29 +14,32 @@
         <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
             <a href="index.html">Home</a>
-            <a href="historicoCompeticoes.html">Histórico de Competições</a>
+            <a href="historicoCompeticoes.html">Histórico de competições</a>
             <a href="RegJuri.html">Júri</a>
             <!--<a href="testes.html">Testes</a>-->
         </div>
     </div></div>
+
+
 
     <div class="btt"></div>
     <div class="btt"><img src="assets/logo.png" class="logo" href="index.html"></div>
     <div class="btt"></div>
     <div class="btt"></div>
 </div>
-
+<div class="separacao"></div>
 <div class="separacao"></div>
 
-<div>
-    <form id="formComp">
+    <form class="formComp">
         <label>Nome da Competição:</label>
         <input id="comp_nome" type="text" name="comp_nome" required>
         <br><br>
         <button class="button" onclick="submitFormComp()">Registar Competição</button>
     </form>
+        <div class="separacao"></div>
 
-    <form id="formRonda">
+        <div>
+    <form class="formRonda">
         <label>Ronda:</label>
         <input id="ronda_nome" type="text" name="ronda_nome" required>
         <br><br>
@@ -42,19 +47,25 @@
         <label>Tipo de Ronda:</label>
         <input id="ronda_tipo" type="text" name="ronda_tipo" required>
         <br><br>
-
         <button class="button" onclick="submitFormRonda()">Registar Ronda</button>
     </form>
 
-    <form id="formEquipa">
+            <div class="separacao"></div>
+
+
+
+    <form class="formEquipa">
         <label>Nome da Equipa:</label>
         <input id="equipa_nome" type="text" name="equipa_nome" required>
         <br><br>
 
         <button class="button" onclick="submitFormEquipa()">Registar Equipa</button>
     </form>
+              <div class="separacao"></div>
 
-    <form id="formRobo">
+
+
+    <form class="formRobo">
         <label>Nome do Robot:</label>
         <input id="robo_nome" type="text" name="robo_nome" required>
         <br><br>
@@ -65,8 +76,6 @@
 
         <button class="button" onclick="submitFormRobo()">Registar Robô</button>
     </form>
-
-    <button class="bttt" onclick="publishInfo()">Submeter</button>
 
 </div>
 
